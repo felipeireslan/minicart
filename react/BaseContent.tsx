@@ -32,7 +32,7 @@ const Content: FC<Props> = ({ finishShoppingButtonLink }) => {
   const { navigate } = useRuntime()
 
   const goToCheckout = (url: string) => {
-    if (major && url === checkoutUrl) {
+    if (major > 0 && url === checkoutUrl) {
       navigate({ to: url })
     } else {
       window.location.href = url
